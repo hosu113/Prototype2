@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbaf82d5237b46e49a10e77f89e18c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyOutOfBounds
+  isAnimal: 0
 --- !u!65 &218768187478969256
 BoxCollider:
   m_ObjectHideFlags: 0
