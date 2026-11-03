@@ -10,12 +10,16 @@ public class SpawnManager : MonoBehaviour
     private float spawnPosZ = 20.0f;
 
     public float startDelay = 2.0f;
-    public float spawnInterval = 2.0f;
+
+    public float spawnIntervalMin = 2.0f;
+    public float spawnIntervalMax = 5.0f;
+
+    //public float spawnInterval = 2.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //
-        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
+        //InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
+        Invoke("SpawnRandomAnimal", startDelay);
         spawnAction.Enable();
     }
 
@@ -33,5 +37,11 @@ public class SpawnManager : MonoBehaviour
 
         Instantiate(animalPrefabs[animalIndex], spawnPos,
             animalPrefabs[animalIndex].transform.rotation);
+        
+        float randomSpawnInterval = Random.Range(spawnIntervalMin, spawnIntervalMax);
+
+        Debug.Log("생성까지" + randomSpawnInterval + "초");
+
+        Invoke("SpawnRandomAnimal", randomSpawnInterval);
     }
 }
