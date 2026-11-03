@@ -441,7 +441,7 @@ MonoBehaviour:
       m_Flags: 4
     - m_Name: up
       m_Id: 6e056b9f-a84a-4bbd-9cc2-eb3c37267e52
-      m_Path: 
+      m_Path: <Keyboard>/upArrow
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -449,7 +449,7 @@ MonoBehaviour:
       m_Flags: 8
     - m_Name: down
       m_Id: 91c4bb37-a90b-411a-aad9-5ec704b903ea
-      m_Path: 
+      m_Path: <Keyboard>/downArrow
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -476,6 +476,8 @@ MonoBehaviour:
   moveInput: {x: 0, y: 0}
   speed: 20
   xRange: 20
+  zRangeMin: -4
+  zRangeMax: 19
   projectilePrefabs: {fileID: 7182235940212265992, guid: 915a1b7830b73ad4dac86ded9d79af44, type: 3}
   fireAction:
     m_Name: Fire

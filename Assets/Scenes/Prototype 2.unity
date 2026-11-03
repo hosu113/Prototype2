@@ -488,7 +488,7 @@ Camera:
   far clip plane: 1000
   field of view: 45
   orthographic: 1
-  orthographic size: 13
+  orthographic size: 14
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -563,6 +563,67 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &620857861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 620857863}
+  - component: {fileID: 620857864}
+  m_Layer: 0
+  m_Name: SpawnManager(Left)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &620857863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620857861}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.71103, y: -0, z: 11.63342}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &620857864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620857861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fc9f7ae0248eb419af7e3545ff6d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnManagerLeft
+  animalPrefabs:
+  - {fileID: 4463334130818054956, guid: 9e6686d0ace749543bba3e2910b892fb, type: 3}
+  - {fileID: 295581435401951645, guid: 2af5110c1f7359745924c29ff8cbb059, type: 3}
+  - {fileID: 5903029075142281889, guid: ba6b773bea919c2409a50f4d2e100f39, type: 3}
+  spawnAction:
+    m_Name: Spawn
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: fecb37dd-551d-43a9-ba30-179bdf7bf879
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+    m_Priority: 0
+  startDelay: 2
+  spawnIntervalMin: 2
+  spawnIntervalMax: 5
 --- !u!1001 &859304047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -615,14 +676,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6630605159543080942, guid: 7b6675de545141649953fd8adec4561b, type: 3}
-      propertyPath: moveAction.m_SingletonActionBindings.Array.data[1].m_Path
-      value: <Keyboard>/upArrow
-      objectReference: {fileID: 0}
-    - target: {fileID: 6630605159543080942, guid: 7b6675de545141649953fd8adec4561b, type: 3}
-      propertyPath: moveAction.m_SingletonActionBindings.Array.data[2].m_Path
-      value: <Keyboard>/downArrow
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -673,7 +726,7 @@ GameObject:
   - component: {fileID: 1132863396}
   - component: {fileID: 1132863395}
   m_Layer: 0
-  m_Name: SpawnManager
+  m_Name: SpawnManager(Top)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -714,7 +767,8 @@ MonoBehaviour:
     m_Flags: 0
     m_Priority: 0
   startDelay: 2
-  spawnInterval: 2
+  spawnIntervalMin: 2
+  spawnIntervalMax: 5
 --- !u!4 &1132863396
 Transform:
   m_ObjectHideFlags: 0
@@ -829,3 +883,4 @@ SceneRoots:
   - {fileID: 992285706}
   - {fileID: 859304047}
   - {fileID: 1132863396}
+  - {fileID: 620857863}

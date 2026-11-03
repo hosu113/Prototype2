@@ -40,7 +40,7 @@ public class SpawnManager : MonoBehaviour
         
         float randomSpawnInterval = Random.Range(spawnIntervalMin, spawnIntervalMax);
 
-        Debug.Log("생성까지" + randomSpawnInterval + "초");
+        //Debug.Log("생성까지" + randomSpawnInterval + "초");
 
         Invoke("SpawnRandomAnimal", randomSpawnInterval);
     }

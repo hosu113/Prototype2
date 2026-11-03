@@ -1015,7 +1015,7 @@ GameObject:
   - component: {fileID: 8265533112011655105}
   - component: {fileID: 5085914956031105919}
   m_Layer: 0
-  m_Name: Animal_Horse_Brown
+  m_Name: Animal_Horse_Brown_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
